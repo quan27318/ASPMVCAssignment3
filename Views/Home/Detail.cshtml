@@ -1,0 +1,61 @@
+﻿@model VewMVC.Models.PersonModel
+@{
+
+    ViewData["Title"] = "Add";
+}
+<h1>This Details Page</h1>
+<h4>Person</h4>
+<div class="row">
+    <div class="col-md-4">
+<table>
+    <thead>
+        <tr>
+            <td>
+                ID
+            </td>
+            <td>
+                FirstName
+            </td>
+            <td>
+                LastName
+            </td>
+            <td>
+                Gender
+            </td>
+            <td>
+                Address
+            </td>
+            <td>
+                Action
+            </td>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Address)
+            </td>
+            <td>
+                <a asp-action="Delete"  asp-route-id="@Model.Id">Delete</a>
+
+                <a asp-action="Index">Back To List</a>
+            </td>
+        </tr>
+    </tbody>
+    
+</table>
+</div>
+</div>
